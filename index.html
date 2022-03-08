@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <!-- meta tag para design responsivo: -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <!-- maximum-scale=1.0 faz com que não seja possível dar zoom na página -->
+
+        <link href="style.css" rel="stylesheet" />
+        <link href="imagens/logo_cortada.jpg" rel="icon" />
+
+        <!--Fontes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="w50">
+                <a href=""><img src="imagens/logo_cortada.jpg"/></a>
+            </div><!--w50-->
+            <div class="w50">
+                <div class="menu">
+                    <a href="#projeto">O Projeto</a>
+                    <a href="#equipe">Equipe NEEL</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div><!--w50-->
+        </header>
+
+        <section class="banner">
+            <img src="imagens/capa.jpg">
+        </section><!--banner-->
+
+
+        <section id="projeto" class="diferenciais">
+            <div class="w50">
+                <h2>O que é o NEEL?</h2>
+                <p>O NEEL é um projeto de alunos do curso de Engenharia de Computação
+                     da Universidade São Francisco que visa integrar os conhecimentos 
+                     das diferentes disciplinas do curso ao mesmo tempo em que estimula 
+                     a criatividade e solução de problemas.</p>
+            </div><!--w50-->
+            <div class="w50">
+                <h2>Objetivos do projeto</h2>
+                <p>O objetivo do projeto é idealizar, construir e implementar um sistema 
+                    capaz de detectar enchentes e inundações em um ambiente urbano e alertar 
+                    a população sobre o risco de acidentes decorrentes desses eventos.</p>
+            </div><!--w50-->
+            <div class="w100">
+                <h2>Como funciona?</h2>
+                <p> <b>1)</b> Será realizado o controle de nível de água de um reservatório 
+                    (rio, córrego etc) com diferentes níveis de volume; </p>
+                <p> <b>2)</b> Determinado nível será explicitado como nível crítico e outro nível, 
+                    um pouco abaixo, como Estado de Alerta; </p>
+                <p> <b>3)</b> Estado de Alerta será identificado com o BIP de um Buzzer intercalado 
+                    por um período de tempo X, indicando uma possibilidade de nível 
+                    crítico; </p>
+                <p> <b>4)</b> O estado crítico é a possível inundação acontecendo. Nesse momento, 
+                    o sensor mandará um sinal para o microcontrolador, que, por sua vez, 
+                    acionará o driver responsável pelo acionamento da BOMBA 1, que abrirá uma 
+                    comporta para esvaziar água pelos dutos jogando numa rede de distribuição
+                     para o tratamento da água e reutilização da mesma; </p>
+                <p> <b>5)</b> Em caso de entupimento do duto da BOMBA 1, um LED começará a piscar 
+                    indicando falha no sistema e o sensor de obstrução mandará um sinal para 
+                    o microcontrolador para desligar BOMBA 1 e Ligar a BOMBA 2 como escape 
+                    de emergência até que se resolva o entupimento da BOMBA 1; </p>
+                <p> <b>6)</b> Os parâmetros como Nível de água e Funcionamento de sistema serão 
+                    mostrados em tempo real em um display LCD controlado pelo Arduino, bem 
+                    como o Microcontrolador; </p>
+                <p> <b>7)</b> O Hardware para acionamento dos motores será uma placa externa que 
+                    será desenvolvida desde o circuito até a fabricação da PCI.</p>
+            </div><!--w100-->
+            <div class="w100">
+                <img src="imagens/diagrama.PNG" />
+            </div><!--w100-->
+        </section><!--diferenciais-->
+
+
+        <section id="equipe" class="quem-somos">
+            <div class="w100">
+                <h2>Equipe NEEL</h2>
+            </div><!--w100-->
+            <div class="w50">
+                <img src="imagens/nathan.jpg" />
+                <p>Nathan Borges</p>
+            </div><!--w50-->
+            <div class="w50">
+                <img src="imagens/eduardo.jpg" />
+                <p>Eduardo Previtale</p>
+            </div><!--w50-->
+            <div class="w50">
+                <img src="imagens/rezende.jpg" />
+                <p>Eduardo Rezende</p>
+            </div><!--w50-->
+            <div class="w50">
+                <img src="imagens/lucas.jpg" />
+                <p>Lucas Ransato</p>
+            </div><!--w50-->
+        </section>
+
+        <footer id="contato">
+            <h3>Dúvidas ou sugestões?</h3>
+            <p>Envie um e-mail para eduardo.montoni@mail.usf.edu.br</p>
+            <p class="direitos">Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
