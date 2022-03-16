@@ -72,6 +72,11 @@ section.diferenciais{
     width: 100%;
 }
 
+.diagrama{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 section.quem-somos{
     display: flex;
     flex-wrap: wrap;
