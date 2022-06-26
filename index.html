@@ -26,8 +26,8 @@
             <div class="w50">
                 <div class="menu">
                     <a href="#projeto">O Projeto</a>
+                    <a href="#desenvolvimento">Desenvolvimento</a>
                     <a href="#equipe">Equipe NEEL</a>
-                    <a href="#contato">Contato</a>
                 </div>
             </div><!--w50-->
         </header>
@@ -38,6 +38,24 @@
 
 
         <section id="projeto" class="diferenciais">
+            <div class="w100">
+                <h1 class="projeto1">O PROJETO</h2>
+            </div><!--w100-->
+            <div class="w100">
+                <h2>Introdução</h2>
+                <p class="intro">Os centros urbanos abrigam a maior parte da tecnologia de um país, ao mesmo 
+                    tempo em que abrigam boa parte da população. Com isso, é inevitável que acidentes 
+                    aconteçam, especialmente por conta da poluição causada pela população e pela falta 
+                    ou negligência de infraestrutura nesses locais. Muitos desses acidentes são causados 
+                    pelas enchentes, que levam consigo bens, estruturas e, muitas vezes, vidas. 
+                    Pensando em resolver esse problema, o grupo NEEL projetou o Controle de Nível de Água, 
+                    um sistema capaz de detectar o nível de água em um reservatório e controlá-lo a partir 
+                    de válvulas que direcionam a água para um outro reservatório a fim de evitar 
+                    transbordamentos e, consequentemente, enchentes. A implementação desse sistema fará com 
+                    que não só acidentes sejam evitados, mas, também, seja possível informar e controlar o 
+                    nível de água dos reservatórios, impactando diretamente na segurança e qualidade de vida 
+                    das populações urbanas e seguindo os princípios das ODS 6, 9 e 17.</p>
+            </div><!--w100-->
             <div class="w50">
                 <h2>O que é o NEEL?</h2>
                 <p>O NEEL é um projeto de alunos do curso de Engenharia de Computação
@@ -52,36 +70,62 @@
                     a população sobre o risco de acidentes decorrentes desses eventos.</p>
             </div><!--w50-->
             <div class="w100">
-                <h2>Como funciona?</h2>
-                <p> <b>1)</b> Será realizado o controle de nível de água de um reservatório 
-                    (rio, córrego etc) com diferentes níveis de volume; </p>
-                <p> <b>2)</b> Determinado nível será explicitado como nível crítico e outro nível, 
-                    um pouco abaixo, como Estado de Alerta; </p>
-                <p> <b>3)</b> Estado de Alerta será identificado com o BIP de um Buzzer intercalado 
-                    por um período de tempo X, indicando uma possibilidade de nível 
-                    crítico; </p>
-                <p> <b>4)</b> O estado crítico é a possível inundação acontecendo. Nesse momento, 
-                    o sensor mandará um sinal para o microcontrolador, que, por sua vez, 
-                    acionará o driver responsável pelo acionamento da BOMBA 1, que abrirá uma 
-                    comporta para esvaziar água pelos dutos jogando numa rede de distribuição
-                     para o tratamento da água e reutilização da mesma; </p>
-                <p> <b>5)</b> Em caso de entupimento do duto da BOMBA 1, um LED começará a piscar 
-                    indicando falha no sistema e o sensor de obstrução mandará um sinal para 
-                    o microcontrolador para desligar BOMBA 1 e Ligar a BOMBA 2 como escape 
-                    de emergência até que se resolva o entupimento da BOMBA 1; </p>
-                <p> <b>6)</b> Os parâmetros como Nível de água e Funcionamento de sistema serão 
-                    mostrados em tempo real em um display LCD controlado pelo Arduino, bem 
-                    como o Microcontrolador; </p>
-                <p> <b>7)</b> O Hardware para acionamento dos motores será uma placa externa que 
-                    será desenvolvida desde o circuito até a fabricação da PCI.</p>
-            </div><!--w100-->
-            <div class="w100">
                 <h2 class="planejamento">Planejamento</h2>
                 <img class="diagrama" src="imagens/diagrama.PNG" />
-                <img class="canvas" src="imagens/PMCanvas Preenchido.PNG" />
+                <img class="diagrama" src="imagens/PMCanvas Preenchido.PNG" />
             </div><!--w100-->
         </section><!--diferenciais-->
 
+        <section id="desenvolvimento" class="resultados">
+            <div class="w100">
+                <h1 class="resultados1">DESENVOLVIMENTO E RESULTADOS</h2>
+            </div><!--w100-->
+            <div class="w100">
+                <h2>Como o projeto funciona?</h2>
+                <p> <b>1)</b> Será realizado o controle de nível de água de um reservatório 
+                    (rio, córrego etc) com diferentes níveis de volume. O nível de água é identificado
+                    através de um sensor ultrassônico, que lerá a distâcia da água em relação à borda 
+                    do reservatório e a enviará para o microcontrolador; </p>
+                <p> <b>2)</b> Determinado nível é explicitado como Estado de Alerta e outro nível, 
+                    um pouco acima, como Estado Crítico; </p>
+                <p> <b>3)</b> O Estado de Alerta é identificado através de um LED amarelo, 
+                    que começará a piscar ao chegar neste nível, indicando a possibilidade de 
+                    Estado Crítico; </p>
+                <p> <b>4)</b> O estado crítico é a iminência de transbordamento. Nesse momento, 
+                    o sensor enviará um sinal para o microcontrolador, que, por sua vez, 
+                    acionará o driver responsável pelo acionamento da Válvula 1, que abrirá uma 
+                    comporta para esvaziar água pelos dutos, jogando-a numa rede de tratamento da água 
+                    para sua reutilização; </p>
+                <p> <b>5)</b> Em caso de entupimento do duto da Válvula 1, um LED começará a piscar, 
+                    indicando falha no sistema, e um sensor de fluxo, localizado no duto de escape de água, 
+                    mandará um sinal para o microcontrolador para que feche a Válvula 1 e abra a Válvula 2 
+                    como escape de emergência até que se resolva o entupimento da Válvula 1; </p>
+                <p> <b>6)</b> Informações como o nível atual de água e o estado de funcionamento do 
+                    sistema serão mostradas em tempo real através de um display LCD controlado pelo 
+                    Arduino. </p>
+            </div><!--w100-->
+            <div class="w100">
+                <h2>Etapas do desenvolvimento</h2>
+                <p></p>
+                <p><a href="https://docs.google.com/presentation/d/18YoqM9Q7r4S2toFZt9uqg5pYcXX8JYkO/edit?usp=sharing&ouid=109054196425051005578&rtpof=true&sd=true">Neste link</a>é 
+                    possível conferir a apresentação de slides final do projeto contendo o diagrama de blocos, tabela de custos, programação do sistema e imagens do protótipo inicial.</p>
+            </div><!--w100-->
+            <div class="w100">
+                <h2>Resultados obtidos</h2>
+                <p>O protótipo final do projeto foi capaz de representar sua ideia principal e demonstrar sua 
+                lógica de controle de maneira simplificada. Infelizmente, devido ao orçamento, não foi possível 
+                inserir elementos como a válvula de escape da água e seu sistema de alimentação para a apresentação do protótipo, porém o grupo 
+                encontrou formas de contornar a ausência desses equipamentos a partir da simplificação do projeto, utilizando um LED azul para 
+                representar o acionamento da válvula. No geral, o grupo acredita que, com um pouco mais de planejamento e um orçamento maior, 
+                seja possível fazer com que o projeto fique ainda melhor e possa ser aplicado em situações reais.</p>
+            </div><!--w100-->
+            <div class="w100">
+                <img class="diagrama" src="imagens/foto_grupo.jpg" />
+                <img class="prototipo" src="imagens/prototipo.jpg" />   
+            </div><!--w100-->
+            
+
+        </section><!--diferenciais-->
 
         <section id="equipe" class="quem-somos">
             <div class="w100">
