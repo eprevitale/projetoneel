@@ -2,7 +2,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    /*
     font-family: 'Noto Sans', sans-serif;
+    */
+    font-family: 'Courier Prime', monospace;
 }
 
 body{
@@ -14,28 +17,59 @@ header{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     height: 100px;
     position: fixed;
     top: 0;
+    text-align: center;
 }
 
-header img{
+.header-menu{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.menu-img{
+    width: 20%;
+    height: 100%;
+    text-align: left;
+    position: absolute;
+}
+
+.menu-img img{
+    height: 60px;
     margin-top: 20px;
     margin-left: 20px;
-    max-height: 60px;
+}
+
+.menu-box{
+    width: 800px;
+    padding-top: 10px;
+    position: relative;
+    margin: auto;
 }
 
 .menu{
-    text-align: right;
-    font-size: 17px;
-    margin-top: 40px;
-    margin-right: 20px;
+    width: 100%;
+    font-size: 20px;
     color: white;
+    text-decoration: none;
+    margin-bottom: 0px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-a{
-    padding: 5px;
+.menu-box a{
+    padding: 0 10px 10px 10px;
+    text-decoration: none;
+    color: rgb(110, 253, 253);
+}
+
+.menu-link:hover{
+    border-bottom: 2px solid rgb(110, 253, 253);
 }
 
 section.banner{
@@ -47,11 +81,19 @@ section.banner{
     width: 100%;
 }
 
+.center{
+    display: flex;
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
 section.diferenciais{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    padding: 100px 0;
+    padding: 200px 0;
     background-color: rgba(0, 0, 0,0.9);
     color: white;
     min-height: 400px;
@@ -59,7 +101,9 @@ section.diferenciais{
 }
 
 .diferenciais h1{
-    margin-bottom: 50px;
+    font-size: 32px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .diferenciais h2{
@@ -69,6 +113,19 @@ section.diferenciais{
 .diferenciais p{
     font-size: 16px;
     padding-top: 10px;
+    text-align: center;
+}
+
+.o-que-e{
+    width: 50%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.objetivos{
+    width: 50%;
+    margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .diferenciais img{
@@ -76,7 +133,7 @@ section.diferenciais{
 }
 
 .intro{
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .diagrama{
@@ -89,18 +146,25 @@ section.resultados{
     flex-wrap: wrap;
     text-align: center;
     padding: 100px 0;
-    background-color: rgba(0, 0, 0,0.9);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
     min-height: 400px;
     transition: 1s;
 }
 
+section.resultados > .center{
+    max-width: 1800px;
+}
+
 .resultados h1{
-    margin-bottom: 50px;
+    font-size: 32px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .resultados h2{
     font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .resultados p{
@@ -108,17 +172,77 @@ section.resultados{
     padding-top: 10px;
 }
 
-.resultados img{
+.funciona{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.funciona p{
+    padding-top: 25px;
+}
+
+.como-funciona{
+    margin-bottom: 50px;
+    padding-left: 100px;
+    width: 50%;
+    text-align: left;
+}
+
+.imagem-funciona{
+    width: 50%;
+    max-width: 100%;
+    padding-left: 70px;
+}
+
+.imagem-funciona img{
+    width: 70%;
+    max-width: 100%;
+}
+
+.desenvolvimento{
+    margin-bottom: 50px;
+}
+
+.desenvolvimento a{
+    color: cyan;
+}
+
+.resultados-obtidos{
+    margin-bottom: 50px;
+}
+
+.box-desenvolvimento{
     width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagem-desenvolvimento{
+    width: 45%;
+    max-width: 100%;
+    padding-left: 100px;
+}
+
+.imagem-desenvolvimento img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.desenvolvimento-single{
+    width: 55%;
+    padding: 20px 150px;
+    padding-right: 140px;
+    margin-top: 35px;
+    text-align: right;
 }
 
 section.quem-somos{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 30px;
+    padding: 80px 0px;
     background-color: rgba(0, 0, 0,0.9);
     color: white;
     min-height: 700px;
@@ -126,19 +250,20 @@ section.quem-somos{
 }
 
 .quem-somos h2{
-    padding-bottom: 20px;
+    margin-bottom: 50px;
+    font-size: 32px;
 }
 
 .quem-somos img{
     width: 250px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 
 .quem-somos p{
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .w33{
@@ -146,10 +271,26 @@ section.quem-somos{
     padding: 0 10px;
 }
 
+.w30{
+    width: 30%;
+}
+
+.w40{
+    width: 40%;
+}
+
 .w50{
     width: 50%;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.w60{
+    width: 60%;
+}
+
+.w70{
+    width: 70%;
 }
 
 .w100{
@@ -159,10 +300,6 @@ section.quem-somos{
     padding-top: 30px;
 }
 
-.prototipo{
-    max-width: 500px;
-}
-
 footer{
     text-align: center;
     margin: auto;
@@ -170,8 +307,8 @@ footer{
     width: 100%;
     background-color: white;
     color: black;
-    opacity: 85%;
-    padding-top: 10px;
+    
+    padding-top: 17px;
 }
 
 footer p{
@@ -191,11 +328,31 @@ footer p{
     header{
         text-align:center;
         padding: 10px;
-        min-height: 140px;
+        min-height: 180px;
         position: relative;
+        display: block;
     }
     header img{
         margin: 0;
+    }
+    .header-menu{
+        display: block;
+        height: auto;
+    }
+    .menu-img{
+        width: 100%;
+        text-align: center;
+        height: auto;
+        position: inherit;
+    }
+    .menu{
+        display: block;
+        font-size: 16px;
+    }
+    .menu-box{
+        width: 100%;
+        margin: 10px 0;
+        height: auto;
     }
     section.banner{
         margin-top: 0px;
@@ -214,10 +371,48 @@ footer p{
     .w100{
         padding-top: 0;
     }
-    section.diferenciais{
-        padding-top: 100px;
+
+    .center{
+        max-width: 700px;
     }
-    .intro{
-        margin-bottom: 0px;
+    
+    /*RESULTADOS*/
+    section.resultados{
+        display: block;
+        text-align: center;
+        padding: 100px 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: rgb(255, 255, 255);
+        min-height: 400px;
+        transition: 0s;
     }
+    section.resultados > .center{
+        max-width: 700px;
+    }
+    .funciona, .desenvolvimento{
+        display: block;
+        padding: 20px 0;
+    }
+    .como-funciona, .box-desenvolvimento{
+        margin-bottom: 50px;
+        padding-left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .imagem-funciona, .imagem-desenvolvimento{
+        width: 100%;
+        max-width: 100%;
+        padding: 0px;
+    }
+    .imagem-funciona, .imagem-desenvolvimento img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .desenvolvimento-single{
+        width: 100%;
+        padding: 20px 20px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
 }
